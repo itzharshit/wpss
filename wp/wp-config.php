@@ -107,9 +107,6 @@ if (isset($_ENV['S3_KEY_ID']) && isset($_ENV['S3_ACCESS_KEY'])) {
 define('DISALLOW_FILE_EDIT', true );
 define('DISALLOW_FILE_MODS', true );
 
-
-
-define('WP_DEFAULT_THEME', 'blogmate');
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
