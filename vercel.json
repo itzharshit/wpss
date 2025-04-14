@@ -1,32 +1,16 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index.js" }
-  ],
-  "functions": {
-    "api/index.js": {
-      "memory": 1024,
-      "includeFiles": "wp/**"
-    }
-  },
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Headers", "value": "*" }
-      ]
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/api/index.js" }
+    ],
+    "functions": {
+        "api/index.js": {
+          "memory": 1024,
+          "includeFiles": "wp/**"
+        }
     },
-    {
-      "source": "/.*\\.(woff2|woff|ttf|eot|otf|svg|css)$",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Headers", "value": "*" }
-      ]
+    "build": {
+      "env": {
+        "NODEJS_AWS_HANDLER_NAME": "handler"
+      }
     }
-  ],
-  "build": {
-    "env": {
-      "NODEJS_AWS_HANDLER_NAME": "handler"
-    }
-  }
 }
