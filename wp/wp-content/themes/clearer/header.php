@@ -8,8 +8,12 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
 	<?php endif; ?>
-<!-- Add manually above wp_head() -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
+        <!-- Favicon -->
+        <link rel="icon" href="<?php echo esc_url( home_url( '/wp-content/uploads/favicon.png' ) ); ?>" type="image/png" sizes="32x32">
+        <link rel="apple-touch-icon" href="<?php echo esc_url( home_url( '/wp-content/uploads/favicon.png' ) ); ?>">
+        <meta name="msapplication-TileImage" content="<?php echo esc_url( home_url( '/wp-content/uploads/favicon.png' ) ); ?>">
+        <!-- Add manually above wp_head() -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
 	<?php wp_head(); ?>
 </head>
 
@@ -48,7 +52,10 @@
 			<?php endif; ?>
 			
 		</div>
-
+           <!-- Custom Logo -->
+           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo" rel="home">
+           <img src="<?php echo esc_url( home_url( '/wp-content/uploads/logo.png' ) ); ?>" alt="<?php bloginfo( 'name' ); ?>" width="200" height="auto">
+           </a>
 	</header><!--/#header-->
 	
 	<?php if ( get_theme_mod( 'featured-search', 'on' ) == 'on' ): ?>
