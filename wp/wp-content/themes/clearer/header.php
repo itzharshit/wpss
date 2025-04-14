@@ -52,10 +52,6 @@
 			<?php endif; ?>
 			
 		</div>
-           <!-- Custom Logo -->
-           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo" rel="home">
-           <img src="<?php echo esc_url( home_url( '/wp-content/uploads/logo.png' ) ); ?>" alt="<?php bloginfo( 'name' ); ?>" width="200" height="auto">
-           </a>
 	</header><!--/#header-->
 	
 	<?php if ( get_theme_mod( 'featured-search', 'on' ) == 'on' ): ?>
